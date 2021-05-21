@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap');
+:root {
+    --text: #4c4c4c;
+    --darkgray: #1d1d1d;
+    --lightgray: #f2f2f2;
+    --footerBg: rgba(255,255,255,.2);
+    --white: #fff;
+    --orange: #e95d3c;
+    --padding:50px 0;
+    --transition: .4s ease;
+}
+
+/**************
+Basic styles
+**************/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Arimo', sans-serif;
+    color: var(--text);
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.container::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+/**************
+Header
+**************/
+
+header {
+    background-image: url(../img/header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+}
+
+header h1 {
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 5rem;
+    text-shadow: 0 0 7px var(--orange);
+    padding-top: 150px;
+    letter-spacing: 2px;
+}
+
+header h5 {
+    text-transform: uppercase;
+    color: var(--orange);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+header nav {
+    padding: 50px 0 150px 0;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    text-transform: uppercase;
+    margin: 0 20px;
+}
+
+header nav ul li a:hover {
+    color: var(--orange);
+    transition: .4s ease;
+}
+
+/**************
+First
+**************/
+
+.first {
+    padding: var(--padding);
+}
+
+.first article {
+    float: left;
+    width: 60%;
+    padding: 20px;
+}
+
+.first article h2 {
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.first article h6 {
+    font-size: 1.2rem;
+    padding: 10px 0 40px 0;
+}
+
+.first article p {
+    font-size: 1.2rem;
+    padding-top: 10px;
+}
+
+.first article img {
+    width: 100%;
+    height: auto;
+}
+
+.first aside {
+    float: right;
+    width: 40%;
+    padding: 20px;
+}
+
+.first aside h3 {
+    padding-bottom: 40px;
+    font-size: 1.6rem;
+}
+
+.first aside .post {
+    padding-bottom: 50px;
+    border-bottom: 1px solid var(--text);
+}
+
+.first aside img {
+    float: left;
+    margin-right: 10px;
+}
+
+.first aside p:first-child {
+    opacity: .7;
+}
+
+.first aside p {
+    line-height: 2;
+}
+
+/**************
+Second
+**************/
+
+.second {
+    padding: var(--padding);
+    background-color: var(--lightgray);
+    text-align: center;
+}
+
+.second h2 {
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.second h4 {
+    font-size: 1.2rem;
+    padding: 10px 0 40px 0;
+}
+
+.second article {
+    float: left;
+    width: 33%;
+    padding: 20px;
+    text-align: left;
+}
+
+.second article img {
+    width: 100%;
+    height: auto;
+}
+
+.second article h3 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+}
+
+.second article p {
+    padding: 20px 0;
+    line-height: 1.5;
+}
+
+.second article button {
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 15px 30px;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 30px;
+}
+
+.second article button:hover {
+    cursor: pointer;
+    transition: var(--transition);
+    background-color: var(--darkgray);
+}
+
+/**************
+Footer
+**************/
+
+footer {
+    background-color: var(--darkgray);
+    color: var(--white);
+    padding: var(--padding);
+}
+
+footer article {
+    width: 33%;
+    float: left;
+    padding: 20px;
+}
+
+footer article h4 {
+    font-size: 1.7rem;
+    padding-bottom: 30px;
+}
+
+footer article ul {
+    list-style: none;
+    line-height: 2;
+}
+
+footer article ul li a {
+    color: var(--text);
+    font-size: 1rem;
+}
+
+/**************
+Bottom bar
+**************/
+
+.bottom-bar {
+    padding: var(--padding);
+    background-color: var(--text);
+    color: var(--lightgray);
+    text-align: center;
+}
+
+/**************
+Responsive
+**************/
+
+@media(max-width:768px) {
+    .container {
+        width: 95%;
+    }
+    header h1 {
+        font-size: 4rem;
+        padding-top: 120px;
+    }
+
+    header nav {
+        padding: 50px 0 120px 0;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 20px 0;
+    }
+
+    header nav ul li a {
+        color: var(--darkgray);
+        font-size: 1.3rem;
+    }
+
+    header nav ul li a:hover {
+        color: var(--orange);
+        transition: var(--transition);
+    }
+    
+    .first article {
+        float: none;
+        width: 100%;
+        padding-right: 20px;
+    }
+    
+    .first aside {
+        float: none;
+        width: 100%;
+        padding-right: 20px;
+    }
+    
+    .first aside .post {
+        padding-bottom: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .second article {
+        width: 100%;
+        padding: 20px;
+        text-align: left;
+    }
+    
+    footer article {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
